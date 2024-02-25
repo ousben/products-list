@@ -1,5 +1,5 @@
 {
-  "name": "product-list",
+  "name": "products-list",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

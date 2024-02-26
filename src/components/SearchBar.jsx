@@ -2,12 +2,12 @@ import React from "react";
 import Input from "./Input";
 import CheckBox from "./CheckBox";
 
-function SearchBar() {
+function SearchBar(props) {
   return (
     <div>
       <div className="input-field">
-        <Input value="" onChange={() => null} placeholder="Serach..."/>
-        <CheckBox checked={false} id="stocked" onChange={() => null} label="Show available products"/>
+        <Input value={props.search} onChange={props.onSearchChange} placeholder="Serach..."/>
+        <CheckBox checked={props.showStock} id="stocked" onChange={props.onStockChange} label="Show available products"/>
       </div>
     </div>
   );

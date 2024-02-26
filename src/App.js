@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchBar from "./components/SearchBar";
 import ProductTable from "./components/ProductTable";
 import './App.css';
@@ -15,9 +15,12 @@ const products = [
 ];
 
 function App() {
+  const [showStock, setShowStock] = useState(false);
+  const [search, setSearch] = useState("");
+
   return (
     <div className="container">
-      <SearchBar />
+      <SearchBar showStock={showStock} onStockChange={setShowStock} search={search} onSearchChange={setSearch} />
       <ProductTable products={products} />
     </div>
   );
